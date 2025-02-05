@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-searchbar placeholder="Buscar" animated></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="grid-container">
+    <ion-grid>
+      <ion-row>
+        <ion-col *ngFor="let img of images" [size]="img.size">
+          <ion-img [src]="img.img" class="grid-image"></ion-img>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

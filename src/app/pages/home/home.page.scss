@@ -1,0 +1,110 @@
+.instagram-title {
+  font-family: 'Lobster', cursive;
+  font-size: 1.8rem;
+  margin-left: 16px;
+  margin-top: 8px;
+  align-self: flex-start;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+.story-list {
+  padding: 16px 0 8px;
+  border-bottom: 1px solid #efefef;
+
+  .scroll-horizontal {
+    padding-left: 16px;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+
+    .scroll-item {
+      position: relative;
+      display: inline-block;
+      margin-right: 16px;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .item-label {
+      font-size: 13px;
+      margin-top: 8px;
+    }
+
+    ion-avatar {
+      &.has-update {
+        padding: 2px;
+        border: 2px solid var(--ion-color-danger);
+      }
+    }
+  }
+}
+
+ion-card {
+  margin: 10px 0 0 0;
+
+  ion-card-header {
+    font-size: large;
+
+    .header-content {
+      display: flex; 
+      align-items: center; 
+      gap: 10px; 
+
+      b {
+        font-size: 20px;
+        margin: 0;
+        align-self: flex-start;
+        position: relative; 
+        top: -5px; 
+      }
+      ion-icon{
+        margin: auto;
+        margin-right: 0;
+      }
+    }
+  }
+  ion-card-content {
+    padding: 0;
+  }
+  
+  ion-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    ion-icon {
+      padding: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  
+    .left-icons {
+      display: flex;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+
+  ion-note{
+    font-size: 12px;
+  }
+
+  b{
+    font-size: 15px;
+  }
+}
+
+.song-title {
+  font-family: 'Lobster', cursive;
+  font-size: 1.4rem;  /* Ajusta el tamaño de la canción */
+  margin-top: 5px;
+  color: #666;  /* Un color suave para la canción */
+  margin-left: 16px;
+}

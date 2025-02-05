@@ -1,0 +1,51 @@
+<ion-content>
+  <div class="profile-container">
+    <!-- Cabecera del perfil -->
+    <div class="profile-header">
+      <ion-avatar class="profile-avatar">
+        <img src="assets/images/usuario.png" alt="Profile Picture">
+      </ion-avatar>
+      <div class="profile-stats">
+        <div class="stat">
+          <span class="stat-number">{{userProfile.posts}}</span>
+          <span class="stat-label">Publicaciones</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">{{userProfile.followers}}</span>
+          <span class="stat-label">Seguidores</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">{{userProfile.following}}</span>
+          <span class="stat-label">Seguidos</span>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- Acciones (Seguir, Mensaje, Añadir) -->
+    <div class="profile-actions">
+      <ion-button (click)="toggleFollow()" fill="outline" class="follow-btn">
+        {{ userProfile.isFollowing ? 'Siguiendo' : 'Seguir' }}
+      </ion-button>
+      <ion-button fill="outline" class="message-btn">Mensaje</ion-button>
+      <ion-icon name="person-add-outline" class="add-icon"></ion-icon>
+    </div>
+
+
+    <!-- Segmento de navegación -->
+    <ion-segment class="profile-segment">
+      <ion-segment-button value="posts">
+        <ion-icon name="grid-outline"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="tagged">
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+
+    <!-- Contenido de publicaciones -->
+    <div class="profile-content">
+      <ion-icon name="camera-outline"></ion-icon>
+      <p>Aún no hay publicaciones</p>
+    </div>
+  </div>
+</ion-content>

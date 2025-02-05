@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <div slot="start" class="instagram-title">
+      Instagram
+    </div>
+    <ion-buttons slot="end">
+      <ion-button color="dark">
+        <ion-icon name="heart-outline" size="large"></ion-icon>
+      </ion-button>
+      <ion-button color="dark">
+        <ion-icon name="paper-plane-outline" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="story-list">
+    <div class="scroll-horizontal">
+      <div class="scroll-item">
+        <ion-avatar class="avatar-md">
+          <img src="assets/images/usuario.png">
+        </ion-avatar>
+        <div class="item-label text-muted">
+          Your Story
+        </div>
+      </div>
+
+      <div class="scroll-item" *ngFor="let user of users">
+        <div class="item-avatar">
+          <ion-avatar class="avatar-md has-update has-status">
+            <img [src]="user.avatar">
+          </ion-avatar>
+        </div>
+        <div class="item-label">
+          {{ user.name }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ion-card *ngFor="let post of post">
+    <ion-card-header>
+      <div class="header-content">
+        <ion-avatar class="avatar-sm">
+          <img [src]="post.avatar" size="large">
+        </ion-avatar>
+        <div class="post-details">
+          <b>{{ post.name }}</b>
+          <ion-note class="song-title"><p></p>Natanael Cano - Diamantes</ion-note>
+        </div>
+        <ion-icon name="ellipsis-horizontal" size="large"></ion-icon>
+      </div>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"></ion-img>
+    </ion-card-content>
+  
+    <ion-card-footer>
+      <div class="left-icons">
+        <ion-icon name="heart-outline" size="large"></ion-icon><b class="footer">{{ post.heart }}</b>
+        <ion-icon name="chatbubble-outline" size="large"></ion-icon><b class="footer">{{ post.comment }}</b>
+        <ion-icon name="paper-plane-outline" size="large"></ion-icon><b class="footer">{{ post.share }}</b>
+      </div>
+      <ion-icon name="bookmark-outline" size="large"></ion-icon>
+    </ion-card-footer>
+    <div>
+      <b>{{post.description}}</b>
+    </div>
+    <ion-note>Ver todos los comentarios</ion-note>
+    <p></p>
+    <ion-note>{{post.date}}</ion-note>
+  </ion-card>
+  
+
+
+</ion-content>
