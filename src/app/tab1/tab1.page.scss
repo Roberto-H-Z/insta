@@ -1,0 +1,32 @@
+.story-carousel {
+    display: flex;
+    overflow-x: scroll;
+    white-space: nowrap;
+    padding: 10px 0;
+  }
+  
+  .story-list {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .story-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    min-width: 70px;
+  }
+  
+  .story-item ion-avatar {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+  }
+  
+  .story-item ion-label {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px;
+  }
